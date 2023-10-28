@@ -1,0 +1,28 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "UsuarioApp",
+            "request": "launch",
+            "mainClass": "br.org.App.UsuarioApp",
+            "projectName": "GerenciamentoPessoasEspecializacao2023_5dbeb7e9"
+        },
+        {
+            "type": "java",
+            "name": "Usuario",
+            "request": "launch",
+            "mainClass": "br.org.contabancaria.Usuario",
+            "projectName": "GerenciamentoPessoasEspecializacao2023_5dbeb7e9"
+        }
+    ]
+}
