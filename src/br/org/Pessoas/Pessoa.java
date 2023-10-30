@@ -1,16 +1,18 @@
 package br.org.Pessoas;
 
+import br.org.Composicao.Endereco;
+
 public class Pessoa {
     private String nome;
     private String dataNascimento;
-    private String endereco;
+    private Endereco endereco;
     private String telefoneContato;
 
     public Pessoa() {
 
     }
 
-    public void cadastrar(String nome, String dataNascimento, String endereco, String telefoneContato) {
+    public void cadastrar(String nome, String dataNascimento, Endereco endereco, String telefoneContato) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
@@ -33,8 +35,8 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public void setEndereco(String novoEndereco) {
-        this.endereco = novoEndereco;
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     public void setTelefoneContato(String novoTelefoneContato) {
@@ -49,7 +51,7 @@ public class Pessoa {
         return dataNascimento;
     }
 
-    public String getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 

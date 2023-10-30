@@ -2,31 +2,50 @@ package br.org.App;
 
 import br.org.Pessoas.*;
 
+import br.org.Composicao.*;
+
 //import br.org.contabancaria.Conta;
 
 public class UsuarioApp {
-    public static void main(String[] args) {
-        // Conta conta01 = new Conta(1, 10000);
+        public static void main(String[] args) {
+                // Conta conta01 = new Conta(1, 10000);
 
-        Pessoa pessoa1 = new Pessoa();
+                Pessoa pessoa1 = new Pessoa();
 
-        pessoa1.cadastrar("Claudio", "29/12/1979", "Uniesp", "83 999454249");
+                Endereco enderecoPessoa1 = new Endereco();
 
-        Cliente cliente1 = new Cliente();
+                enderecoPessoa1.cadastrar("Avenida Mar Caspio", "37", "58102-162", "Cabedelo", "PB", "BR");
 
-        cliente1.cadastrar("1", "estudante", "Eduardo", "01/01/2001", "Praia", "83 988780788");
+                pessoa1.cadastrar("Claudio", "29/12/1979", enderecoPessoa1, "83 988780788");
 
-        Funcionario funcionario1 = new Funcionario();
+                Cliente cliente1 = new Cliente();
 
-        funcionario1.cadastrar(1, 5000.0, "01/01/2021", "vendedor", "Almeida", "01/01/2002", "Loja", "83 988081937");
-        ;
+                Endereco enderecoCliente1 = new Endereco();
 
-        System.out.println(
-                "O funcionário de nome " + funcionario1.getNome() + " tem salario " + funcionario1.getSalario());
+                enderecoCliente1.cadastrar("BR230", "Km 13", "58109-303", "Cabedelo", "PB", "BR");
 
-        System.out
-                .println("O cliente de nome " + cliente1.getNome() + " tem como código " + cliente1.getCodigo());
+                cliente1.cadastrar("011", "estudante", "Eduardo",
+                                "01/01/2001", enderecoCliente1, "83 988780788");
 
-    }
+                Funcionario funcionario1 = new Funcionario();
+
+                Endereco enderecoFuncionario1 = new Endereco();
+
+                enderecoFuncionario1.cadastrar("BR230", "Km 9", "58102-162", "Cabedelo", "PB", "BR");
+
+                funcionario1.cadastrar(1, 9000.0, "01/01/2021", "Desenvolvedor", "Sena", "29/12/1979",
+                                enderecoFuncionario1, "83 999454249");
+
+                System.out.println(
+                                "O funcionário de nome " + funcionario1.getNome() + " tem salario "
+                                                + funcionario1.getSalario() + " e mora em "
+                                                + funcionario1.getEndereco());
+
+                System.out
+                                .println("O cliente de nome " + cliente1.getNome() + " tem endereco "
+                                                + cliente1.getEndereco());
+
+                System.out.println("");
+        }
 
 }

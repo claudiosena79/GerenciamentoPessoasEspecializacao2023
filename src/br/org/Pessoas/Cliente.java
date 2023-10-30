@@ -1,5 +1,7 @@
 package br.org.Pessoas;
 
+import br.org.Composicao.Endereco;
+
 public class Cliente extends Pessoa {
     private String codigo;
     private String profissao;
@@ -25,7 +27,7 @@ public class Cliente extends Pessoa {
     }
 
     public void cadastrar(String codigo, String profissao,
-            String nome, String dataNascimento, String endereco, String telefoneContato) {
+            String nome, String dataNascimento, Endereco endereco, String telefoneContato) {
         this.codigo = codigo;
         this.profissao = profissao;
         setNome(nome);
