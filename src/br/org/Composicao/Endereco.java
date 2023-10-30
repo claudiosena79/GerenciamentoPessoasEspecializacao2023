@@ -68,4 +68,9 @@ public class Endereco {
         this.pais = pais;
     }
 
+    @Override
+    public String toString() {
+        return rua + " " + numero + " " + cidade + " " + estado + " " + pais + " " + cep;
+    }
+
 }

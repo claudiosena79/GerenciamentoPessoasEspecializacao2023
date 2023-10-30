@@ -1,6 +1,6 @@
 package br.org.Pessoas;
 
-import br.org.Composicao.Endereco;
+import br.org.Composicao.*;
 
 public class Funcionario extends Pessoa {
     private int matricula;
@@ -49,7 +49,7 @@ public class Funcionario extends Pessoa {
     }
 
     public void cadastrar(int matricula, Double salario, String dataAdmissao, String cargo,
-            String nome, String dataNascimento, Endereco endereco, String telefoneContato) {
+            String nome, String dataNascimento, Endereco endereco, Telefone telefoneContato) {
         this.matricula = matricula;
         this.salario = salario;
         this.dataAdmissao = dataAdmissao;
