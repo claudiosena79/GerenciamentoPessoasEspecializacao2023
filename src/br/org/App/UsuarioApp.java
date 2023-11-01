@@ -28,11 +28,15 @@ public class UsuarioApp {
 
                 Telefone telefoneCliente1 = new Telefone();
 
+                Profissao profissaoCliente1 = new Profissao();
+
                 enderecoCliente1.cadastrar("BR230", "Km 13", "58109-303", "Cabedelo", "PB", "BR");
 
                 telefoneCliente1.cadastrar("83", "988789788");
 
-                cliente1.cadastrar("011", "estudante", "Eduardo",
+                profissaoCliente1.cadastrar("Engenheiro", "TI", "Analista de Sistemas");
+
+                cliente1.cadastrar("011", profissaoCliente1, "Eduardo",
                                 "01/01/2001", enderecoCliente1, telefoneCliente1);
 
                 Funcionario funcionario1 = new Funcionario();
@@ -41,9 +45,13 @@ public class UsuarioApp {
 
                 Telefone telefoneFuncionario1 = new Telefone();
 
+                Cargo cargoFuncionario1 = new Cargo();
+
                 enderecoFuncionario1.cadastrar("BR230", "Km 9", "58102-162", "Cabedelo", "PB", "BR");
 
-                funcionario1.cadastrar(1, 9000.0, "01/01/2021", "Desenvolvedor", "Sena", "29/12/1979",
+                cargoFuncionario1.cadastrar("Vendedor", "Vendas", "Vendas e suporte aos clientes");
+
+                funcionario1.cadastrar(1, 9000.0, "01/01/2021", cargoFuncionario1, "Sena", "29/12/1979",
                                 enderecoFuncionario1, telefoneFuncionario1);
 
                 System.out.println("A pessoa de nome " + pessoa1.getNome() + " nascida em "
@@ -51,12 +59,14 @@ public class UsuarioApp {
                                 + pessoa1.getEndereco().toString() + " e telefone "
                                 + pessoa1.getTelefoneContato().toString());
 
-                System.out.println("O funcionário de nome " + funcionario1.getNome() + " tem salario "
-                                + funcionario1.getSalario() + " e mora em "
+                System.out.println("O funcionário de nome " + funcionario1.getNome()
+                                + " tem cargo " + funcionario1.getCargo().toString() + " salario "
+                                + funcionario1.getSalario() + " e endereco "
                                 + funcionario1.getEndereco().toString());
 
-                System.out.println("O cliente de nome " + cliente1.getNome() + " tem endereco "
-                                + cliente1.getEndereco().toString());
+                System.out.println("O cliente de nome " + cliente1.getNome()
+                                + " tem profissao " + cliente1.getProfissao().toString()
+                                + " e reside em " + cliente1.getEndereco().toString());
 
                 System.out.println("");
         }

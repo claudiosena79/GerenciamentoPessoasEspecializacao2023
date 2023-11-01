@@ -6,9 +6,9 @@ public class Funcionario extends Pessoa {
     private int matricula;
     private double salario;
     private String dataAdmissao;
-    private String cargo;
+    private Cargo cargo;
 
-    public void promover(String novoCargo) {
+    public void promover(Cargo novoCargo) {
         this.cargo = novoCargo;
     }
 
@@ -28,7 +28,7 @@ public class Funcionario extends Pessoa {
         return dataAdmissao;
     }
 
-    public String getCargo() {
+    public Cargo getCargo() {
         return cargo;
     }
 
@@ -48,7 +48,7 @@ public class Funcionario extends Pessoa {
 
     }
 
-    public void cadastrar(int matricula, Double salario, String dataAdmissao, String cargo,
+    public void cadastrar(int matricula, Double salario, String dataAdmissao, Cargo cargo,
             String nome, String dataNascimento, Endereco endereco, Telefone telefoneContato) {
         this.matricula = matricula;
         this.salario = salario;

@@ -1,17 +1,18 @@
 package br.org.Pessoas;
 
 import br.org.Composicao.Endereco;
+import br.org.Composicao.Profissao;
 import br.org.Composicao.Telefone;
 
 public class Cliente extends Pessoa {
     private String codigo;
-    private String profissao;
+    private Profissao profissao;
 
     public String getCodigo() {
         return codigo;
     }
 
-    public String getProfissao() {
+    public Profissao getProfissao() {
         return profissao;
     }
 
@@ -19,7 +20,7 @@ public class Cliente extends Pessoa {
         this.codigo = codigo;
     }
 
-    public void setProfissao(String profissao) {
+    public void setProfissao(Profissao profissao) {
         this.profissao = profissao;
     }
 
@@ -27,7 +28,7 @@ public class Cliente extends Pessoa {
 
     }
 
-    public void cadastrar(String codigo, String profissao,
+    public void cadastrar(String codigo, Profissao profissao,
             String nome, String dataNascimento, Endereco endereco, Telefone telefoneContato) {
         this.codigo = codigo;
         this.profissao = profissao;
