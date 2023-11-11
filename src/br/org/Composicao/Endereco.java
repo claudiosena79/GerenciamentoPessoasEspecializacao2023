@@ -1,5 +1,10 @@
 package br.org.Composicao;
 
+/**
+ * Classe Endereco - separa o atributo em 6 Strings (RUA, NUMERO, CEP, CIDADE,
+ * ESTADO e PAÍS)
+ */
+
 public class Endereco {
 
     private String rua;

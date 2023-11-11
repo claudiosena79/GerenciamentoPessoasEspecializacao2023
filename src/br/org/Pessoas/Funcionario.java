@@ -1,6 +1,13 @@
 package br.org.Pessoas;
 
+import java.time.LocalDate;
 import br.org.Composicao.*;
+
+/**
+ * @author Claudio Sena
+ * @version 1.0
+ * @date 28/10/2023
+ */
 
 public class Funcionario extends Pessoa {
     private int matricula;
@@ -49,15 +56,16 @@ public class Funcionario extends Pessoa {
     }
 
     public void cadastrar(int matricula, Double salario, String dataAdmissao, Cargo cargo,
-            String nome, String dataNascimento, Endereco endereco, Telefone telefoneContato) {
+            String nome, LocalDate dataNascimento, Endereco endereco, Telefone telefoneContato) {
         this.matricula = matricula;
         this.salario = salario;
         this.dataAdmissao = dataAdmissao;
         this.cargo = cargo;
-        setNome(nome);
-        setDataNascimento(dataNascimento);
-        setEndereco(endereco);
-        setTelefoneContato(telefoneContato);
+        // setNome(nome);
+        // setDataNascimento(dataNascimento);
+        // setEndereco(endereco);
+        // setTelefoneContato(telefoneContato);
+        cadastrar(nome, dataNascimento, endereco, telefoneContato);
 
     }
 

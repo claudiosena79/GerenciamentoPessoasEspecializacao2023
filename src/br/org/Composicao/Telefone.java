@@ -1,5 +1,9 @@
 package br.org.Composicao;
 
+/**
+ * Classe Telefone - separa o atributo em 2 Strings (DDD + TELEFONE)
+ */
+
 public class Telefone {
     private String ddd;
     private String telefone;

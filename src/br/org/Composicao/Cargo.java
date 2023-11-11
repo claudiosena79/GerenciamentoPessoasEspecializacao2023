@@ -1,5 +1,12 @@
 package br.org.Composicao;
 
+/**
+ * @author Claudio Sena
+ * @version 1.0
+ * @date 30/10/2023
+ * @param - titulo, departamento e descrição
+ */
+
 public class Cargo {
 
     /**

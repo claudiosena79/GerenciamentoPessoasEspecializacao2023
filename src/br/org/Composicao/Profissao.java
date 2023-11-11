@@ -1,5 +1,12 @@
 package br.org.Composicao;
 
+/**
+ * @author Claudio Sena
+ * @version 1.0
+ * @date 30/10/2023
+ * @param - titulo, campo e descrição
+ */
+
 public class Profissao {
     /**
      * titulo: Representa o título do cargo (por exemplo, “Gerente de Vendas”,
