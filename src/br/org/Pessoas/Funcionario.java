@@ -12,7 +12,7 @@ import br.org.Composicao.*;
 public class Funcionario extends Pessoa {
     private int matricula;
     private double salario;
-    private String dataAdmissao;
+    private LocalDate dataAdmissao;
     private Cargo cargo;
 
     public void promover(Cargo novoCargo) {
@@ -31,7 +31,7 @@ public class Funcionario extends Pessoa {
         return salario;
     }
 
-    public String getdataAdmissao() {
+    public LocalDate getdataAdmissao() {
         return dataAdmissao;
     }
 
@@ -43,7 +43,7 @@ public class Funcionario extends Pessoa {
     // this.salario = salario; método reajustar salário já faz isso
     // }
 
-    public void setDataAdmissao(String dataAdmissao) {
+    public void setDataAdmissao(LocalDate dataAdmissao) {
         this.dataAdmissao = dataAdmissao;
     }
 
@@ -55,7 +55,7 @@ public class Funcionario extends Pessoa {
 
     }
 
-    public void cadastrar(int matricula, Double salario, String dataAdmissao, Cargo cargo,
+    public void cadastrar(int matricula, Double salario, LocalDate dataAdmissao, Cargo cargo,
             String nome, LocalDate dataNascimento, Endereco endereco, Telefone telefoneContato) {
         this.matricula = matricula;
         this.salario = salario;
